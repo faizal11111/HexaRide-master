@@ -1,44 +1,34 @@
-CarPool
-=======
-A Django-based web application to facilitate sharing commutes in a company.
+# 🚗 HexaRide - CarPool Web Application
 
-What information is stored?
----------------------------
-This web application displays only emails as personal information.
+**HexaRide** is a Django-based web application that facilitates seamless carpooling within a company or organization. Save fuel, reduce traffic, and build connections with your colleagues while commuting!
 
-Getting Started with project
----------------
-1. Install the requirements
+---
 
-.. code-block:: sh
+## 📌 Features
 
-    $ python -m pip install -r requirements.txt
+- 🧑‍💼 User Registration & Authentication
+- 📧 Company email validation
+- 🚘 Post a ride (driver)
+- 🧍‍♀️ Request a ride (rider)
+- 🔍 Search available rides
+- ✅ Admin panel to manage users and commutes
+- 🔒 Secure and minimal personal data usage (email only)
 
-2. Set up the database
+---
 
-.. code-block:: sh
+## 🚀 Getting Started
 
-    $ python manage.py makemigrations ui
-    $ python manage.py migrate
 
-3. Start the app
+# 📦 Install Dependencies
+python -m pip install -r requirements.txt
 
-.. code-block:: sh
+# ⚙️ Set Up the Database
+python manage.py makemigrations ui
+python manage.py migrate
 
-    $ python manage.py runserver
+# 👤 Create a Superuser (Optional)
+python manage.py createsuperuser
 
-Getting Started with Docker
----------------------------
-This web application comes with a ``Dockerfile`` and ``docker-compose.yml``. It can be run with:
+# ▶️ Run the Development Server
+python manage.py runserver
 
-.. code-block:: sh
-
-    $ docker-compose up
-
-Cron Job
---------
-Periodically run this command to remove expired commutes
-
-.. code-block:: sh
-
-    $ python manage.py delete_expired
